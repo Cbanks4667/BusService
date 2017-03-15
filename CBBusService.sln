@@ -1,0 +1,41 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4E6661CE-6911-4C1B-8FD5-B52EF935ABCD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5966C010-9FC7-4FEF-BF8A-BD2575AFB5E0}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CBBusService", "src\A2BusService\CBBusService.xproj", "{1C1918E9-D0F2-44CA-8526-FBBDB6E08D62}"
+	ProjectSection(ProjectDependencies) = postProject
+		{46857FD4-45D8-4BB0-B4BB-7406A4065E53} = {46857FD4-45D8-4BB0-B4BB-7406A4065E53}
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CBClassLibrary", "src\CBClassLibrary\CBClassLibrary.xproj", "{46857FD4-45D8-4BB0-B4BB-7406A4065E53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C1918E9-D0F2-44CA-8526-FBBDB6E08D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C1918E9-D0F2-44CA-8526-FBBDB6E08D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C1918E9-D0F2-44CA-8526-FBBDB6E08D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C1918E9-D0F2-44CA-8526-FBBDB6E08D62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46857FD4-45D8-4BB0-B4BB-7406A4065E53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46857FD4-45D8-4BB0-B4BB-7406A4065E53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46857FD4-45D8-4BB0-B4BB-7406A4065E53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46857FD4-45D8-4BB0-B4BB-7406A4065E53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1C1918E9-D0F2-44CA-8526-FBBDB6E08D62} = {4E6661CE-6911-4C1B-8FD5-B52EF935ABCD}
+		{46857FD4-45D8-4BB0-B4BB-7406A4065E53} = {4E6661CE-6911-4C1B-8FD5-B52EF935ABCD}
+	EndGlobalSection
+EndGlobal

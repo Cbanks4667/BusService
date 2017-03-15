@@ -1,0 +1,55 @@
+@model IEnumerable<CBBusService.Models.BusStop>
+
+@{
+    ViewData["Title"] = "Bus Stop Listing";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>
+    <a asp-action="Create">Create New Bus Stop</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-route-stopsOrderBy="busStopNumber">
+                    @Html.DisplayNameFor(model => model.BusStopNumber)
+                </a>
+            </th>
+            <th>
+                <a asp-route-stopsOrderBy="location">
+                    @Html.DisplayNameFor(model => model.Location)
+                </a>
+            </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.GoingDowntown)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-action="RouteSelector" asp-route-busStopNumber="@item.BusStopNumber"
+                       asp-route-location="@item.Location">
+                        @item.BusStopNumber
+                    </a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GoingDowntown)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.BusStopNumber">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.BusStopNumber">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.BusStopNumber">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

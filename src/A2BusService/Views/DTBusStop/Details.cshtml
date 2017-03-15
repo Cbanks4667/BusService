@@ -1,0 +1,36 @@
+@model CBBusService.Models.BusStop
+
+@{
+    ViewData["Title"] = "Detailsof a Bus Stop";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>BusStop</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BusStopNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BusStopNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GoingDowntown)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GoingDowntown)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.BusStopNumber">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

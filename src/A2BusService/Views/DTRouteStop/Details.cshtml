@@ -1,0 +1,32 @@
+@model CBBusService.Models.RouteStop
+@using Microsoft.AspNetCore.Http;
+
+@{
+    ViewData["Title"] = $"Details for Stop to Route: {Context.Session.GetString("busRouteCode")} - " +
+        $"{ Context.Session.GetString("routeName")}";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <h4>RouteStop</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BusStopNumberNavigation.Location)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BusStopNumberNavigation.Location)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OffsetMinutes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OffsetMinutes)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.RouteStopId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
